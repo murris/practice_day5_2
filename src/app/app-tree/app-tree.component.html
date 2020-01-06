@@ -1,0 +1,23 @@
+<div class="container ">
+    <h3 class="text-center">Usuarios registrados</h3>
+    <div class="row">
+        <div *ngFor="let user of users" class="card col-md border-primary m-2">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text"><b>Primer Nombre:</b>  {{user.firstName}}</p>
+                <p class="card-text"><b>Segundo Nombre:</b>  {{user.secondName}}</p>
+                <p class="card-text"><b>Fecha de Nacimiento:</b> {{user.birthDate }}</p>
+                <p class="card-text"><b>Edad:</b> {{user.age}}</p>
+                <!-- <p class="card-text">{{user.team}}</p> -->
+                <p class="card-text">{{user.photo}}</p>
+                <a class="btn btn-primary" (click)="mostrarProjectos = true; userId = user.id;">proyectos</a>
+            </div>
+        </div>
+    </div>
+    <div class="card border-primary">
+        <app-second-child-component *ngIf="mostrarProjectos" [idUser]="userId"></app-second-child-component>
+        <div class="card-body">
+            <a class="btn btn-primary" (click)="mostrarProjectos = false;" *ngIf="mostrarProjectos">limpiar</a>
+        </div>
+    </div>
+</div>
