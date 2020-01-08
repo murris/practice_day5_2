@@ -13,13 +13,17 @@ export class ImageComponent implements OnInit {
   @Input('url') set url(url:string){     
   // Preguntamos si existe un valor en la variable.
       if(url){               
-          this.viewImage=false;        
-          this.loadImage(url);            
-      }        
+          this.viewImage=false;       
+          this.loadImage("./assets/img/"+url);            
+      }
+      else {
+          this.viewImage=false;
+          this.loadImage("./assets/default.jpg")
+      }
   }
 
   // Obtenemos una referencia hacia el tag "<img>" para poder manipularlo luego
-  @ViewChild('lImage',{static: true}) lImage : ElementRef;
+  @ViewChild('lImage',{static: false}) lImage : ElementRef;
   
   constructor() { }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { of } from "rxjs";
 
-interface user {
+export interface user {
   id: number;
   firstName: string;
   secondName: string;
@@ -51,7 +51,7 @@ export class AppTreeService {
   public projects: Array<porject> = [
     {
       id: 1,
-      photo: "",
+      photo: "inf1.jpg",
       name: "MOSPA",
       whereImplemented: "bolivia",
       status: true,

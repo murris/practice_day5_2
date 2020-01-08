@@ -1,7 +1,11 @@
 <div class="container row text-center">
-    <div class="card col p-1" *ngFor="let proyecto of proyectos" [ngClass]="{'border-success': proyecto.status, 'border-danger': !proyecto.status}">
-        <div class="card-header">{{proyecto.name}}</div>
+    <div class="card col"  *ngFor="let proyecto of proyectos" [ngClass]="{'border-success': proyecto.status, 'border-danger': !proyecto.status}">
+        <br>
+        <div class="text-center">
+            <img src="./assets/img/{{proyecto.photo | photo}}" class="img-thumbnail" style="height: 150px; width: 150px;">
+        </div>
         <div class="card-body">
+            <p class="card-text">{{proyecto.name}}</p>  
             <p class="card-text"><b>Acronym: </b>{{proyecto.acronym}} </p>
             <p class="card-text"><b>Donce fue implementado: </b>{{proyecto.whereImplemented}} </p>
             <p class="card-text"><b>Estado: </b>{{proyecto.status}} </p>

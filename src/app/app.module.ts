@@ -7,6 +7,7 @@ import { AppTreeComponent } from './app-tree/app-tree.component';
 import { FirstChildComponentComponent } from './app-tree/first-child-component.component';
 import { SecondChildComponentComponent } from './app-tree/second-child-component.component';
 import { ImageComponent } from './app-tree/image.component';
+import { PhotoPipe } from './app-tree/photo.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ImageComponent } from './app-tree/image.component';
     AppTreeComponent,
     FirstChildComponentComponent,
     SecondChildComponentComponent,
-    ImageComponent
+    ImageComponent,
+    PhotoPipe
   ],
   imports: [
     BrowserModule,
